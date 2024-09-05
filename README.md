@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+A small React app that demonstrates some important React concepts such as state management, props, component lifecycle, and event handling. This app will display a list of concepts you've learned and allow you to add new concepts to the list.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
