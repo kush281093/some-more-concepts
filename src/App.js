@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ConceptsList from './components/ConceptsList';
+import AddConcept from './components/AddConcept';
 
 function App() {
+  const [concepts, setConcepts] = useState([
+    'State Management with useState',
+    'Props for Passing Data',
+    'Effect Hook for Side Effects',
+  ]);
+
+  const addConcept = (newConcept) => {
+    setConcepts([...concepts, newConcept]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Concepts</h1>
+      <AddConcept addConcept={addConcept} />
+      <ConceptsList concepts={concepts} />
     </div>
   );
 }
